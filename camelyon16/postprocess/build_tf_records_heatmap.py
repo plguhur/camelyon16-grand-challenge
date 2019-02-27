@@ -66,8 +66,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import sys
-sys.path.insert(0, '/home/arjun/MS/Thesis/CAMELYON-16/source')
+
 import os
 import time
 from datetime import datetime

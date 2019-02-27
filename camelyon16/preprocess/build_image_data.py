@@ -75,18 +75,15 @@ import threading
 import numpy as np
 import tensorflow as tf
 
-CAMELYON_PROCESSED_PATCHES_TRAIN = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/' \
-                                   'patch-based-classification/raw-data/train/'
+CAMELYON_PROCESSED_PATCHES_TRAIN = 'Processed/patch-based-classification/raw-data/train/'
 CAMELYON_PROCESSED_PATCHES_TRAIN_NEGATIVE = CAMELYON_PROCESSED_PATCHES_TRAIN + 'label-0/'
 CAMELYON_PROCESSED_PATCHES_TRAIN_POSITIVE = CAMELYON_PROCESSED_PATCHES_TRAIN + 'label-1/'
 
-CAMELYON_PROCESSED_PATCHES_VALIDATION = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
-                                        'Processed/patch-based-classification/raw-data/validation/'
+CAMELYON_PROCESSED_PATCHES_VALIDATION = 'Processed/patch-based-classification/raw-data/validation/'
 CAMELYON_PROCESSED_PATCHES_VALIDATION_NEGATIVE = CAMELYON_PROCESSED_PATCHES_VALIDATION + 'label-0/'
 CAMELYON_PROCESSED_PATCHES_VALIDATION_POSITIVE = CAMELYON_PROCESSED_PATCHES_VALIDATION + 'label-1/'
 
-OUTPUT_DIR = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/' \
-             'patch-based-classification/tf-records/'
+OUTPUT_DIR = 'Processed/patch-based-classification/tf-records/'
 
 N_TRAIN_SAMPLES = 250000
 N_VALIDATION_SAMPLES = 10000

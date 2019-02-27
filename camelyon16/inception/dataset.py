@@ -11,13 +11,11 @@ import tensorflow as tf
 import camelyon16.utils as utils
 
 
-PROCESSED_PATCHES_TRAIN = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/' \
-                                   'patch-based-classification/raw-data/train/'
+PROCESSED_PATCHES_TRAIN = 'Processed/patch-based-classification/raw-data/train/'
 PROCESSED_PATCHES_TRAIN_NEGATIVE = PROCESSED_PATCHES_TRAIN + 'label-0/'
 PROCESSED_PATCHES_TRAIN_POSITIVE = PROCESSED_PATCHES_TRAIN + 'label-1/'
 
-PROCESSED_PATCHES_VALIDATION = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/' \
-                                        'Processed/patch-based-classification/raw-data/validation/'
+PROCESSED_PATCHES_VALIDATION = 'Processed/patch-based-classification/raw-data/validation/'
 PROCESSED_PATCHES_VALIDATION_NEGATIVE = PROCESSED_PATCHES_VALIDATION + 'label-0/'
 PROCESSED_PATCHES_VALIDATION_POSITIVE = PROCESSED_PATCHES_VALIDATION + 'label-1/'
 

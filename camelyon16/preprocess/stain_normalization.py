@@ -57,7 +57,7 @@ def apply_lut(tile, lut):
 
 if __name__ == "__main__":
 
-    crc_images_folder = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/stain_normalization/Kather_texture_2016_larger_images_10'
+    crc_images_folder = 'stain_normalization/Kather_texture_2016_larger_images_10'
 
     file_paths = glob.glob(os.path.join(crc_images_folder, 'CRC*APPLICATION.tif'))
     file_paths.sort()

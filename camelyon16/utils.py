@@ -27,11 +27,9 @@ PATCHES_VALIDATION_AUG_POSITIVE_PATH = PATCHES_VALIDATION_AUG_DIR + 'label-1/'
 
 TRAIN_TF_RECORDS_DIR = DATA_DIR + 'Processed/patch-based-classification/tf-records/'
 
-HEAT_MAP_RAW_PATCHES_DIR =
-    'Data/Processed/heat-map/patches/raw/'
+HEAT_MAP_RAW_PATCHES_DIR = 'Data/Processed/heat-map/patches/raw/'
 
-HEAT_MAP_TF_RECORDS_DIR =
-    'Data/Processed/heat-map/patches/tf-records/'
+HEAT_MAP_TF_RECORDS_DIR = 'Data/Processed/heat-map/patches/tf-records/'
 
 HEAT_MAP_WSIs_PATH = 'Data/Processed/heat-map/WSIs/'
 

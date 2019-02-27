@@ -1,22 +1,8 @@
-import getpass
-
-users = ['arjun', 'millpc']
-
-user = getpass.getuser()
-print('user: %s' % user)
-
-assert user in users, 'User not Authorised!!'
-
-
-def is_running_on_server():
-    return user == 'arjun'
-
-
 data_subset = ['train', 'train-aug', 'validation', 'validation-aug', 'heatmap']
 
-THESIS_FIGURE_DIR = '/home/millpc/Documents/Arjun/Study/Thesis/Defense/Me/figures/'
+THESIS_FIGURE_DIR = 'figures/'
 
-DATA_DIR = '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/'
+DATA_DIR = 'CAMELYON16/'
 
 TUMOR_WSI_PATH = DATA_DIR + 'TrainingData/Train_Tumor'
 NORMAL_WSI_PATH = DATA_DIR + 'TrainingData/Train_Normal'
@@ -39,71 +25,30 @@ PATCHES_TRAIN_AUG_EXCLUDE_MIRROR_WSI_POSITIVE_PATH = PATCHES_TRAIN_AUG_DIR + 'ex
 PATCHES_VALIDATION_AUG_NEGATIVE_PATH = PATCHES_VALIDATION_AUG_DIR + 'label-0/'
 PATCHES_VALIDATION_AUG_POSITIVE_PATH = PATCHES_VALIDATION_AUG_DIR + 'label-1/'
 
-TRAIN_TF_RECORDS_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/tf-records/',
-    'millpc': DATA_DIR + 'Processed/patch-based-classification/tf-records/'
-}
+TRAIN_TF_RECORDS_DIR = DATA_DIR + 'Processed/patch-based-classification/tf-records/'
 
-HEAT_MAP_RAW_PATCHES_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/patches/raw/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/patches/raw/'
-}
+HEAT_MAP_RAW_PATCHES_DIR =
+    'Data/Processed/heat-map/patches/raw/'
 
-HEAT_MAP_TF_RECORDS_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/patches/tf-records/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/'
-              'heat-map/patches/tf-records/'
-}
+HEAT_MAP_TF_RECORDS_DIR =
+    'Data/Processed/heat-map/patches/tf-records/'
 
-HEAT_MAP_WSIs_PATH_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/WSIs/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/WSIs/'
-}
+HEAT_MAP_WSIs_PATH = 'Data/Processed/heat-map/WSIs/'
 
-HEAT_MAP_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/heat-map/heatmaps/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/data/CAMELYON16/Processed/heat-map/heatmaps/'
-}
+HEAT_MAP_DIR = 'Data/Processed/heat-map/heatmaps/'
 
-FINE_TUNE_MODEL_CKPT_PATH_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model5/model.ckpt-95000',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model5/model.ckpt-95000'
-}
+FINE_TUNE_MODEL_CKPT_PATH = 'Data/Processed/training/model5/model.ckpt-95000'
 
-EVAL_MODEL_CKPT_PATH_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model8/model.ckpt-90000',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/all_models/model8/model.ckpt-90000'
-}
+EVAL_MODEL_CKPT_PATH = 'Data/Processed/training/model8/model.ckpt-90000'
 
-HEATMAP_MODEL_CKPT_PATH_MILLPC = {
-    'model5': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model5/model.ckpt-95000',
-    'model8': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/successful_model/model8/model.ckpt-90000'
-}
+HEATMAP_MODEL_CKPT_PATH = 'training/successful_model/model5/model.ckpt-95000'
 
-HEATMAP_MODEL_CKPT_PATH_ARJUN = {
-    'model5': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model5/model.ckpt-95000',
-    'model8': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model8/model.ckpt-90000'
-}
+HEATMAP_MODEL_CKPT_PATH = 'Data/Processed/training/model5/model.ckpt-95000'
 
-TRAIN_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/training/model8/',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/training/all_models/model8/'
-}
+TRAIN_DIR = 'Data/Processed/training/model8/'
 
-EVAL_DIR_LIST = {
-    'arjun': '/home/arjun/MS/Thesis/CAMELYON-16/Data/Processed/evaluation',
-    'millpc': '/home/millpc/Documents/Arjun/Study/Thesis/CAMELYON16/evaluation'
-}
+EVAL_DIR = 'Data/Processed/evaluation'
 
-TRAIN_TF_RECORDS_DIR = TRAIN_TF_RECORDS_DIR_LIST[user]
-TRAIN_DIR = TRAIN_DIR_LIST[user]
-EVAL_DIR = EVAL_DIR_LIST[user]
-HEAT_MAP_RAW_PATCHES_DIR = HEAT_MAP_RAW_PATCHES_DIR_LIST[user]
-HEAT_MAP_TF_RECORDS_DIR = HEAT_MAP_TF_RECORDS_DIR_LIST[user]
-HEAT_MAP_WSIs_PATH = HEAT_MAP_WSIs_PATH_LIST[user]
-HEAT_MAP_DIR = HEAT_MAP_DIR_LIST[user]
-FINE_TUNE_MODEL_CKPT_PATH = FINE_TUNE_MODEL_CKPT_PATH_LIST[user]
-EVAL_MODEL_CKPT_PATH = EVAL_MODEL_CKPT_PATH_LIST[user]
 
 heatmap_models = ['model5', 'model8']
 FIRST_HEATMAP_MODEL = 'model5'
